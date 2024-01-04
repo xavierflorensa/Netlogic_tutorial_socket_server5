@@ -220,7 +220,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 320.0
+    Value: 600.0
   - Name: Height
     Type: BaseDataVariableType
     DataType: Size
@@ -247,12 +247,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 20.0
+      Value: 18.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 66.0
+      Value: 51.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -340,6 +340,11 @@ Children:
           Type: PropertyType
           DataType: UInt16
           Value: 0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: Label1
     Type: Label
     Children:
@@ -352,12 +357,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 24.0
+      Value: 20.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 10.0
+      Value: 0.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -379,17 +384,27 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 170.0
+      Value: 430.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 140.0
+      Value: 160.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 100.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
   - Name: Label2
     Type: Label
     Children:
@@ -402,7 +417,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 25.0
+      Value: 20.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -413,6 +428,11 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 95.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: TextBox2
     Type: TextBox
     Children:
@@ -424,12 +444,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 170.0
+      Value: 410.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 140.0
+      Value: 180.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -439,7 +459,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: Label3
     Type: Label
     Children:
@@ -452,7 +477,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 25.0
+      Value: 4.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
@@ -463,4 +488,9 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 95.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
 - File: Screens/Screens.yaml

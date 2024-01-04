@@ -9,6 +9,7 @@ using FTOptix.Core;
 using FTOptix.CoreBase;
 using FTOptix.NetLogic;
 using System.Net.Sockets;
+using System.Net;
 using System.Threading;
 using System.IO.Pipes;
 using System.IO;
@@ -29,8 +30,12 @@ public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic
         textbox.Text = "Waiting for a connection.";
         Log.Info("Waiting for a connection.");
         TcpClient client = listener.AcceptTcpClient();
-        //Console.WriteLine("Client accepted.");
-        textbox.Text = "Client accepted.";
+        //----------------------------------
+        var clientIpLAN = client.Client.LocalEndPoint;
+        Log.Info(clientIpLAN.ToString());
+        //Console.WriteLine("Client accepted );
+        textbox.Text = "Client accepted from IP " + clientIpLAN.ToString() ;
+        //----------------------------------
         Log.Info("Client accepted.");
 
         while (true)
@@ -52,6 +57,7 @@ public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic
                 }
                 string request = Encoding.UTF8.GetString(buffer, 0, recv);
                 //Console.WriteLine("request received: "+ request);
+                textbox2.FontSize =40;
                 textbox2.Text = request;
                 Log.Info("request received: "+ request);
                 sw.WriteLine("You rock!");
