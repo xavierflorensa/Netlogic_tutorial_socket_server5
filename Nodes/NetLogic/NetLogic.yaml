@@ -1,0 +1,17 @@
+Name: NetLogic
+Type: NetLogicCategoryFolder
+Children:
+- Name: RuntimeNetLogic1
+  Id: g=c80a72fe7d64a9eca6cd9c1dfc1965fd
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: SocketServer_listen
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"textboxNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"textboxNodeId2","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

@@ -1,0 +1,466 @@
+Name: UI
+Type: UICategoryFolder
+Children:
+- Name: DefaultStyleSheet
+  Id: g=8da2b5865c73184b748c69f73d34bedf
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ButtonStyle
+    - Name: Accent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: BorderedRectangular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00000000"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00000000"
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 0.0
+  - Name: InputBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ChartStyle
+  - Name: DataListStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Type: CheckBoxStyle
+- Name: NativePresentationEngine
+  Type: NativePresentationEngine
+  ReferenceType: HasOrderedComponent
+  Children:
+  - Name: EnableVirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Netlogic_tutorial_socket_server5/UI/MainWindow"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Window"
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Netlogic_tutorial_socket_server5/UI/DefaultStyleSheet"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/Users/Anonymous"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/UserType"
+  - Name: Sessions
+    Type: BaseObjectType
+- Name: MainWindow
+  Id: g=01a7e8933afd7c95fe894b0859308138
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 320.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 200.0
+  - Name: Caption
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ""
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Netlogic_tutorial_socket_server5@BrowseName"
+  - Name: Button2
+    Type: Button
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Listen to client"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 66.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 202.0
+    - Name: MouseClickEventHandler1
+      Type: EventHandler
+      Children:
+      - Name: ListenEventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+      - Name: MethodsToCall
+        Type: BaseObjectType
+        Children:
+        - Name: MethodContainer1
+          Type: BaseObjectType
+          Children:
+          - Name: ns=3;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Netlogic_tutorial_socket_server5/NetLogic/RuntimeNetLogic1"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=3;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "SocketServer_listen"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: textboxNodeId
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../TextBox1@NodeId"
+            - Name: textboxNodeId2
+              Type: BaseDataVariableType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../TextBox2@NodeId"
+      - Name: EventArguments
+        Type: MouseClickEvent
+        Children:
+        - Name: EventId
+          Type: PropertyType
+          DataType: ByteString
+          Value: ""
+        - Name: EventType
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceNode
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+        - Name: SourceName
+          Type: PropertyType
+          DataType: String
+          Value: ""
+        - Name: Time
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: ReceiveTime
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Message
+          Type: PropertyType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Severity
+          Type: PropertyType
+          DataType: UInt16
+          Value: 0
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Socket Server"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 24.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 115.0
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+  - Name: TextBox1
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+  - Name: Label2
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Server Status"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 25.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 105.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 95.0
+  - Name: TextBox2
+    Type: TextBox
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 170.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 140.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+  - Name: Label3
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Message Received"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 25.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 95.0
+- File: Screens/Screens.yaml
