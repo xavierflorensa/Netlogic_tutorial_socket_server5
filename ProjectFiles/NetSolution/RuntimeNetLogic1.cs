@@ -26,20 +26,18 @@ public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic
         Log.Info("A button has been pressed");
         TcpListener listener = new TcpListener(System.Net.IPAddress.Any, 2000);
         listener.Start();
+        textbox.Text = "Waiting for a connection.";
+        Log.Info("Waiting for a connection.");
+        TcpClient client = listener.AcceptTcpClient();
+        //Console.WriteLine("Client accepted.");
+        textbox.Text = "Client accepted.";
+        Log.Info("Client accepted.");
+
         while (true)
         {
-            //Console.WriteLine("Waiting for a connection.");
-            textbox.Text = "Waiting for a connection.";
-            Log.Info("Waiting for a connection.");
-            TcpClient client = listener.AcceptTcpClient();
-            //Console.WriteLine("Client accepted.");
-            textbox.Text = "Client accepted.";
-            Log.Info("Client accepted.");
-        
             NetworkStream stream = client.GetStream();
             StreamReader sr = new StreamReader(client.GetStream());
             StreamWriter sw = new StreamWriter(client.GetStream());
-           
             try
             {
                 byte[] buffer = new byte[1024];
