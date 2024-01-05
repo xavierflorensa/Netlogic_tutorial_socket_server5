@@ -19,10 +19,12 @@ using System.Diagnostics;
 public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic
 { 
     [ExportMethod]
-    public void SocketServer_listen(NodeId textboxNodeId,NodeId textboxNodeId2)
+    public void SocketServer_listen(NodeId textboxNodeId,NodeId textboxNodeId2,NodeId textboxNodeId3)
     {
         var textbox = InformationModel.Get<TextBox>(textboxNodeId);
         var textbox2 = InformationModel.Get<TextBox>(textboxNodeId2);
+        var textbox3 = InformationModel.Get<TextBox>(textboxNodeId3);
+        textbox3.FontSize =40;
         textbox.Text = "A button has been pressed";
         Log.Info("A button has been pressed");
         TcpListener listener = new TcpListener(System.Net.IPAddress.Any, 2000);
@@ -60,7 +62,8 @@ public class RuntimeNetLogic1 : FTOptix.NetLogic.BaseNetLogic
                 textbox2.FontSize =40;
                 textbox2.Text = request;
                 Log.Info("request received: "+ request);
-                sw.WriteLine("You rock!");
+                //sw.WriteLine("You rock!");
+                sw.WriteLine(textbox3.Text);
                 sw.Flush();
             }
             catch(Exception e)
